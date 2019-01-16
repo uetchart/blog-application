@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h2>Posts</h2>
+      
+      <ul class="list-group">
+        <app-post-list-item  *ngFor="let post of posts; let i = index"
+                       [post]="post"
+                       [postIndex]="i"></app-post-list-item>
+        <p *ngIf="posts.length == 0">
+          Aucun post n'a été trouvé... veuillez créer un <a routerLink="new">nouveau post</a>
+        </p>
+      </ul>
+    </div>
+  </div>
+</div>
